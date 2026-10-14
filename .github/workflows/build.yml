@@ -1,0 +1,28 @@
+
+name: Build C++ EXE
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Ambil kode dari repository
+        uses: actions/checkout@v4
+
+      - name: Siapkan compiler C++
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Compile menjadi EXE
+        run: cl /EHsc /std:c++17 /TP menu /Fe:menu.exe
+
+      - name: Simpan file EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: menu-exe
+          path: menu.exe
