@@ -9,7 +9,7 @@ int main() {
     int porsi[5];
     int total[5];
     int i;
-    int totalsemua=0;
+    int grandtotal=0;
     for(i=0;i<5;i++)
         {
             cout<<"menu ";
@@ -21,8 +21,13 @@ int main() {
             total[i]=porsi[i]*harga[i];
             cout<<"total ";
             cout<<total[i]<<endl;
-            cout<<"___________________"<<endl;
+            cout<<"____________________________________"<<endl;
+            grandtotal=grandtotal+total[i];
         }
+    cout<<"------------------------------------"<<endl;
+    cout<<"TOTAL SEMUA PESANAN ADALAH: ";
+    cout<<grandtotal<<endl;
+    cout<<"------------------------------------"<<endl;
     
     return 0;
 }
