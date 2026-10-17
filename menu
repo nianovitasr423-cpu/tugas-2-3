@@ -28,6 +28,7 @@ int main() {
     cout<<"TOTAL SEMUA PESANAN ADALAH: ";
     cout<<grandtotal<<endl;
     cout<<"------------------------------------"<<endl;
+    system("pause");
     
     return 0;
 }
